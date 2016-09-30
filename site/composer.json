@@ -30,11 +30,25 @@
     {
       "type": "composer",
       "url": "https://wpackagist.org"
-    }
+    },
+    {
+      "type": "package",
+      "package": {
+          "name": "deliciousbrains/wp-migrate-db-pro",
+          "type": "wordpress-plugin",
+          "version": "1.4.6",
+          "dist": {
+              "type": "zip",
+              "url": "https://deliciousbrains.com/dl/wp-migrate-db-pro-latest.zip?licence_key=0f88fa46-6ed2-4c87-987f-e2610ecc8bd7&site_url=genet.io"
+          },
+          "require": {
+              "composer/installers": "v1.0.7"
+          }
+      }
+  }
   ],
   "require": {
     "php": ">=5.6",
-    "composer/installers": "~1.0.12",
     "vlucas/phpdotenv": "^2.0.1",
     "johnpbloch/wordpress": "4.6.1",
     "oscarotero/env": "^1.0",
@@ -42,7 +56,9 @@
     "wpackagist-plugin/wordpress-seo": "3.6.0",
     "wpackagist-plugin/advanced-custom-fields": "4.4.9",
     "wpackagist-plugin/advanced-excerpt": "4.2.3",
-    "wpackagist-plugin/safe-redirect-manager": "1.7.8"
+    "wpackagist-plugin/safe-redirect-manager": "1.7.8",
+    "deliciousbrains/wp-migrate-db-pro": "*",
+    "roots/soil": "3.7.1"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^2.5.1"

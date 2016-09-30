@@ -4,44 +4,40 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "4348ec52fb17b6cc938e0ff63f0423c1",
-    "content-hash": "f97de8b9e6d5a7f25497c4e6719e140b",
+    "hash": "b228007ce93be009d8cff4455ea6befd",
+    "content-hash": "c63fdb0b79f3960b316dbf50aed192f0",
     "packages": [
         {
             "name": "composer/installers",
-            "version": "v1.0.25",
+            "version": "v1.0.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/installers.git",
-                "reference": "36e5b5843203d7f1cf6ffb0305a97e014387bd8e"
+                "reference": "d792632d27e1980d921cbbba12eab7b888338d4c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/installers/zipball/36e5b5843203d7f1cf6ffb0305a97e014387bd8e",
-                "reference": "36e5b5843203d7f1cf6ffb0305a97e014387bd8e",
+                "url": "https://api.github.com/repos/composer/installers/zipball/d792632d27e1980d921cbbba12eab7b888338d4c",
+                "reference": "d792632d27e1980d921cbbba12eab7b888338d4c",
                 "shasum": ""
             },
-            "require": {
-                "composer-plugin-api": "^1.0"
-            },
             "replace": {
-                "roundcube/plugin-installer": "*",
                 "shama/baton": "*"
             },
             "require-dev": {
                 "composer/composer": "1.0.*@dev",
-                "phpunit/phpunit": "4.1.*"
+                "phpunit/phpunit": "3.7.*"
             },
-            "type": "composer-plugin",
+            "type": "composer-installer",
             "extra": {
-                "class": "Composer\\Installers\\Plugin",
+                "class": "Composer\\Installers\\Installer",
                 "branch-alias": {
                     "dev-master": "1.0-dev"
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "Composer\\Installers\\": "src/Composer/Installers"
+                "psr-0": {
+                    "Composer\\Installers\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -52,60 +48,52 @@
                 {
                     "name": "Kyle Robinson Young",
                     "email": "kyle@dontkry.com",
-                    "homepage": "https://github.com/shama"
+                    "homepage": "https://github.com/shama",
+                    "role": "Developer"
                 }
             ],
             "description": "A multi-framework Composer library installer",
-            "homepage": "https://composer.github.io/installers/",
+            "homepage": "http://composer.github.com/installers/",
             "keywords": [
-                "Craft",
-                "Dolibarr",
-                "Hurad",
-                "ImageCMS",
-                "MODX Evo",
-                "Mautic",
-                "OXID",
-                "SMF",
-                "Thelia",
-                "WolfCMS",
+                "TYPO3 CMS",
+                "TYPO3 Flow",
+                "TYPO3 Neos",
                 "agl",
-                "aimeos",
-                "annotatecms",
-                "bitrix",
                 "cakephp",
-                "chef",
                 "codeigniter",
                 "concrete5",
-                "croogo",
-                "dokuwiki",
                 "drupal",
-                "elgg",
                 "fuelphp",
-                "grav",
                 "installer",
                 "joomla",
                 "kohana",
                 "laravel",
+                "li3",
                 "lithium",
-                "magento",
                 "mako",
-                "mediawiki",
                 "modulework",
-                "moodle",
                 "phpbb",
-                "piwik",
                 "ppi",
-                "puppet",
-                "roundcube",
-                "shopware",
                 "silverstripe",
                 "symfony",
-                "typo3",
                 "wordpress",
-                "zend",
-                "zikula"
+                "zend"
             ],
-            "time": "2016-04-13 19:46:30"
+            "time": "2013-10-24 16:13:49"
+        },
+        {
+            "name": "deliciousbrains/wp-migrate-db-pro",
+            "version": "1.4.6",
+            "dist": {
+                "type": "zip",
+                "url": "https://deliciousbrains.com/dl/wp-migrate-db-pro-latest.zip?licence_key=0f88fa46-6ed2-4c87-987f-e2610ecc8bd7&site_url=genet.io",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "v1.0.7"
+            },
+            "type": "wordpress-plugin"
         },
         {
             "name": "johnpbloch/wordpress",
@@ -233,6 +221,51 @@
                 "env"
             ],
             "time": "2016-05-08 17:14:32"
+        },
+        {
+            "name": "roots/soil",
+            "version": "3.7.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/roots/soil.git",
+                "reference": "5b9b9d8a878b295f44b35cba826c462b20cc1d9c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/roots/soil/zipball/5b9b9d8a878b295f44b35cba826c462b20cc1d9c",
+                "reference": "5b9b9d8a878b295f44b35cba826c462b20cc1d9c",
+                "shasum": ""
+            },
+            "require": {
+                "composer/installers": "~1.0",
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "squizlabs/php_codesniffer": "^2.5.1"
+            },
+            "type": "wordpress-plugin",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Scott Walkinshaw",
+                    "email": "scott.walkinshaw@gmail.com",
+                    "homepage": "https://github.com/swalkinshaw"
+                },
+                {
+                    "name": "Ben Word",
+                    "email": "ben@benword.com",
+                    "homepage": "https://github.com/retlehs"
+                }
+            ],
+            "description": "A WordPress plugin which contains a collection of modules to apply theme-agnostic front-end modifications",
+            "homepage": "https://roots.io/plugins/soil/",
+            "keywords": [
+                "wordpress"
+            ],
+            "time": "2016-08-30 18:15:45"
         },
         {
             "name": "roots/wp-password-bcrypt",
