@@ -1,7 +1,81 @@
-;// Grid settings
+@import url(https://fonts.googleapis.com/css?family=Open+Sans|Roboto);
+@fa-font-path:   "../font";
+
+//Set up font smoothing
+html, body {
+    -webkit-font-smoothing: antialiased;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+}
+
+// Fonts
+$body-font:				'proxima-nova', 'Open sans', sans-serif;
+$header-font:			'proxima-nova', 'Open sans', sans-serif;
+
+// Grid settings
 $enable-flex:           true;
 $main-sm-columns:       12;
 $sidebar-sm-columns:    4;
 
 // Colors
-$brand-primary:         #27ae60;
+$brand-primary:         #19a4cc;
+$brand-grey:			#333333;
+$brand-brown: 			#736458;
+$brand-mustard:			#e6c22c;
+$brand-white:			#ccc;
+$brand-black:			#333;
+$white: 				#fff;
+$black:					#000;
+
+// Font size
+$font-weight:			100;
+$font-strong:			500;
+
+$base-font-size: 1rem;
+$base-line-height: $base-font-size * 1.25;
+
+$type-scale: (
+  -1: $base-font-size * 0.667,  // small text
+  0: $base-font-size,      		// body text
+  1: $base-font-size * 1.333, 	// large text
+  2: $base-font-size * 1.777,  	// main heading
+  3: $base-font-size * 2.369	// title
+);
+
+@function type-scale($level) {
+  @return map-get($type-scale, $level);
+}
+
+$line-heights: (
+  -1: $base-line-height,
+  0: $base-line-height,
+  1: $base-line-height * 1.333,
+  2: $base-line-height * 2
+);
+
+@function line-height($level) {
+  @return map-get($line-heights, $level);
+}
+
+// Menu settings
+$menu-height: 			10vh;
+$submenu-width: 		150px;
+
+// Grid
+$row-padding:       2vh;
+
+// Transitions mixin
+/* @include transition(all,2s,ease-out); */
+@mixin transitions($what: all, $time: 2s, $how: ease) {
+    -webkit-transition: $what $time $how;
+    -moz-transition:    $what $time $how;
+    -ms-transition:     $what $time $how;
+    transition:         $what $time $how;
+}
+
+// Border radius
+@mixin border-radius($radius...) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}

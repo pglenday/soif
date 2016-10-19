@@ -31,3 +31,19 @@ function excerpt_more() {
   return ' &hellip; <a href="' . get_permalink() . '">' . __('Continued', 'sage') . '</a>';
 }
 add_filter('excerpt_more', __NAMESPACE__ . '\\excerpt_more');
+
+/**
+* Add typescript
+*/
+function soif_typekit() {
+  wp_enqueue_script('soif_typekit', '//use.typekit.net/axl4hyh.js', array(), '1.0.0');
+}
+add_action( 'wp_enqueue_scripts',  __NAMESPACE__ . '\\soif_typekit');
+
+function soif_typekit_inline() {
+    if (wp_script_is('soif_typekit', 'enqueued' )) {
+       echo '<script type="text/javascript">try{Typekit.load();}catch(e){}</script>';
+    }
+}
+add_action( 'wp_head', __NAMESPACE__ . '\\soif_typekit_inline');
+

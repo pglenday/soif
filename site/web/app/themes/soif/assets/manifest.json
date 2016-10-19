@@ -19,6 +19,11 @@
     },
     "jquery.js": {
       "bower": ["jquery"]
+    },
+    "jquery.slicknav.js": {
+      "files": [
+        "scripts/jquery.slicknav.js"
+      ]
     }
   },
   "config": {

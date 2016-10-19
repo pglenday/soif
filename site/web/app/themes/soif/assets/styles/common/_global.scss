@@ -1,28 +1,159 @@
-// Add/remove floats
-.float-right {
-	float: right;
-}
-.float-left {
-	float: left;
-}
-.float-none {
-	float: none;
-}
-.clear {
-	clear: both;
+
+// Typography
+
+body {
+  font-size: type-scale(0);
+  font-weight: $font-weight;
+  font-family: $body-font !important;
+  color: $brand-black;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: $header-font;
+  letter-spacing: 2px;
+  padding-bottom: type-scale(1);
+}
+
+h1, h2 {
+  color: $brand-primary;
+  font-weight: 300;
+}
+
+h1 {
+  font-size: type-scale(3);
+  line-height: line-height(3);
+}
+
+
+h2 {
+  font-size: type-scale(2);
+  line-height: line-height(2);
+}
+
+h3, h4, h5 {
+  font-size: type-scale(1);
+  line-height: line-height(1);
+  padding-bottom: line-height(1);
+}
+
+h6 {
+  font-size: type-scale(0);
+  line-height: line-height(0);
+  padding-bottom: line-height(0);
+}
+
+p {
+}
+
+small {font-size: type-scale(-1);}
+
+// Rows
+.row {
+  padding-top: $row-padding;
+}
+
+.row, .main {
+  margin: 0;
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+}
+
+.container-fluid {padding-right: 0; padding-left: 0;}
+
+// Add/remove floats
+.pull-left {
+  float: left !important;
+}
+.pull-right {
+  float: right !important;
+}
+
+.float-none {
+  float: none;
+}
+.clear {
+  clear: both;
+}
 // Text alignment
 .text-left {
-	text-align: left;
+  text-align: left;
 }
 .text-center {
-	text-align: center;
+  text-align: center;
 }
 .text-right {
-	text-align: right;
+  text-align: right;
 }
+
 // Apply capital case to an element
 .caps {
-	text-transform: uppercase;
+  text-transform: uppercase;
 }
+
+//Style ACF OEmbed Videos
+.embed-container { 
+  position: relative; 
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  height: auto;
+} 
+
+.embed-container iframe,
+.embed-container object,
+.embed-container embed { 
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+//Nav Pill styling
+.nav-pills li {
+  padding: 10px 15px;
+  @include border-radius(3px);
+  &:hover, &:focus { 
+    background-color: $brand-primary; 
+    a { color: white; }
+  }
+  a { 
+    text-decoration: none; 
+  }
+}
+
+//Sort out fized header
+.wrap {
+  padding-top: 12vh;
+}
+
+//Jumbotron styling
+.jumbotron {
+  height: 74vh;
+  h1 {font-size: 6vmin; line-height: 8vmin; text-align:center;}
+  h6 {font-size: 4vmin; line-height: 5vmin; text-align:center;}
+  margin-bottom: 0;
+}
+
+.lookdown {
+  height: 12vh;
+  background-color: $brand-primary;
+  text-align: center;
+  h3 {
+    color: $white;
+    letter-spacing: 0px;
+    padding: 3vh 0 0;
+    font-size: 3.5vh;
+    line-height: 0vh;
+  }
+  .fa.white {
+    color: $white;
+  }
+  .fa-lg {
+    font-size: 3.5vh;
+    line-height: 3.5vh;
+    vertical-align: text-top;
+  }
+}
+

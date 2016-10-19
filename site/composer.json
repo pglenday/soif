@@ -45,6 +45,22 @@
               "composer/installers": "v1.0.7"
           }
       }
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "advanced-custom-fields/advanced-custom-fields-pro",
+        "version": "5.4.8",
+        "type": "wordpress-plugin",
+        "dist": {
+          "type": "zip",
+          "url": "https://connect.advancedcustomfields.com/index.php?p=pro&a=download"
+        },
+        "require": {
+          "philippbaschke/acf-pro-installer": "^1.0",
+          "composer/installers": "^1.0"
+        }
+    }
   }
   ],
   "require": {
@@ -53,12 +69,13 @@
     "johnpbloch/wordpress": "4.6.1",
     "oscarotero/env": "^1.0",
     "roots/wp-password-bcrypt": "1.0.0",
-    "wpackagist-plugin/wordpress-seo": "3.6.0",
-    "wpackagist-plugin/advanced-custom-fields": "4.4.9",
+    "wpackagist-plugin/wordpress-seo": "3.7.0",
     "wpackagist-plugin/advanced-excerpt": "4.2.3",
     "wpackagist-plugin/safe-redirect-manager": "1.7.8",
     "deliciousbrains/wp-migrate-db-pro": "*",
-    "roots/soil": "3.7.1"
+    "roots/soil": "3.7.1",
+    "wpackagist-plugin/acf-theme-code": "1.1.1",
+    "advanced-custom-fields/advanced-custom-fields-pro": "*"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^2.5.1"

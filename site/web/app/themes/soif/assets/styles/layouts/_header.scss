@@ -1,0 +1,85 @@
+
+// Hide Slicknav menu
+
+.slicknav_menu {
+  display:none;
+}
+
+// Show Slicknav menu on mobile
+@media screen and (max-width: 60em) {
+  .banner {
+    display:none;
+  }
+  
+   .slicknav_menu {
+    display:block;
+
+    .brand {width: 90%;}
+  }
+}
+
+// Style main menu
+  
+.banner {
+  background-color: $white;
+  margin: 0 auto;
+  width: 100%;
+  display: inline-block;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  text-align: center;
+  @include transitions(all, 0.5s, linear);
+  &.fixed {
+    border-bottom: 1px solid lighten($brand-grey,50);
+  	.nav-primary, .nav-secondary {height: 8vh;}
+  	li {height: 8vh;}
+  	a.brand img {width: 8vh; padding: 0;}
+  }
+}
+
+.nav-primary, .nav-secondary {
+	display: inline-block;
+	text-align: center;
+	height: 12vh;
+  @include transitions(all, 0.5s, linear);
+}
+
+.nav-primary ul, .nav-secondary ul {
+	padding-left: 0;
+}
+
+.nav-primary li, .nav-secondary li {
+	display: table-cell;
+    vertical-align: middle;
+    height: 12vh;
+    @include transitions(all, 0.5s, linear);
+}
+
+.nav-primary li a, .nav-secondary li a{
+	padding: 10px 15px;
+    font-size: 1em;
+    color: #333;
+}
+
+.nav-primary .current-menu-item a, .nav-primary .current_page_item a, .nav-primary a:hover{
+}
+
+.nav-primary ul ul {
+}
+
+.nav-primary ul li:hover > ul {
+}
+
+a.brand {
+  color: $white;
+  font-weight: $font-strong;
+  vertical-align: top;
+  text-align: center;
+  img {
+  	width:11vh; padding: 0.5vh 0;
+  @include transitions(all, 0.5s, linear);
+  }
+  display: inline-block;
+  text-decoration: none;
+}

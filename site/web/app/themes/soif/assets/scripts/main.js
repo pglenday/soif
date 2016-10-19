@@ -19,6 +19,32 @@
     'common': {
       init: function() {
         // JavaScript to be fired on all pages
+
+        // Shrink header on scroll
+        $(window).bind('scroll', function () {
+            if ($(window).scrollTop() > 50) {
+                $('.banner').addClass('fixed');
+            } else {
+                $('.banner').removeClass('fixed');
+            }
+        });
+
+        // Run Slicknav on all pages
+        $(function(){$('#left-menu').slicknav({
+          label: '',
+          easingOpen:  "swing",
+          init: function() {
+              $elem = $('.slicknav_icon');
+          },
+          afterOpen: function(){
+              $elem.html('<span class="slicknav_icon-bar-close"></span>');
+          },
+          afterClose: function(){
+              $elem.html('<span class="slicknav_icon-bar"></span><span class="slicknav_icon-bar"></span><span class="slicknav_icon-bar"></span>');
+          }
+        });
+        $('.slicknav_menu').prepend('<a class="brand" href=""><img class="logo" src="//localhost:3000/app/themes/soif/dist/images/soif-logo.svg" alt="SOIF Logo" />School of International Futures</a>');
+      });
       },
       finalize: function() {
         // JavaScript to be fired on all pages, after page specific JS is fired

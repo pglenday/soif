@@ -7,6 +7,17 @@
   "license": "MIT",
   "private": true,
   "dependencies": {
-    "bootstrap": "git://github.com/twbs/bootstrap.git#v4.0.0-alpha.4"
-  }
+    "bootstrap": "git://github.com/twbs/bootstrap.git#v4.0.0-alpha.4",
+    "font-awesome": "^4.6.3"
+  },
+  "devDependencies": {
+  },
+  "overrides": {
+    "font-awesome": {
+      "main": [
+        "./scss/font-awesome.scss",
+        "./fonts/*"
+      ]
+    }
+  }  
 }
