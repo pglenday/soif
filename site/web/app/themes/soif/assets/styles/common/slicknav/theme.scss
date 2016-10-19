@@ -1,0 +1,99 @@
+//colors
+$color_0: rgba(255, 255, 255, 0.75);
+$color_btn: #222;
+$color_text: $white;
+$color_shadow: #000;
+$color_bg: $brand-brown;
+$color_hover_bg: $brand-brown;
+$color_hover_text: $brand-white;
+
+.slicknav_menu {
+	font-size: 16px;
+	box-sizing: border-box;
+	background: $brand-brown;
+	padding: 0px;
+	* {
+		box-sizing: border-box;
+	}
+	.slicknav_menutxt {
+		color: $color_text;
+		font-weight: bold;
+		text-shadow: 0 1px 3px $color_shadow;
+	}
+	.slicknav_icon-bar {
+		background-color: $color_text;
+	}
+}
+.slicknav_btn {
+	margin: 0px;
+	text-decoration: none;
+	text-shadow: 0 1px 1px $color_0;
+	-webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
+	border-radius: 0px;
+	background-color: $brand-grey;
+}
+.slicknav_nav {
+	color: $color_text;
+	background-color: $brand-brown;
+	margin: 40px 0 60px;
+	padding: 0;
+	font-size: 0.875em;
+	list-style: none;
+	overflow: hidden;
+	ul {
+		list-style: none;
+		overflow: hidden;
+		padding: 0;
+		margin: 0 0 0 20px;
+	}
+	.slicknav_row {
+		padding: 5px 10px;
+		margin: 0;
+		&:hover {
+			background: $color_hover_bg;
+			color: $color_text;
+		}
+	}
+	a {
+		padding: 5px 10px;
+		text-decoration: none;
+		color: $color_text;
+		text-transform: uppercase;
+		text-align: center;
+		&:hover {
+			background: $color_hover_bg;
+			color: $color_hover_text;
+		}
+	}
+	.slicknav_txtnode {
+		margin-left: 15px;
+	}
+	.slicknav_item a {
+		padding: 0;
+		margin: 0;
+	}
+	.slicknav_parent-link a {
+		padding: 0;
+		margin: 0;
+	}
+}
+.slicknav_brand {
+	color: $color_text;
+	font-size: 18px;
+	line-height: 30px;
+	padding: 7px 12px;
+	height: 44px;
+}
+
+.slicknav_icon-bar-close {
+	&:before {
+		content: '\d7';
+		position: absolute;
+		top: 2px;
+		color: white;
+		text-shadow: none;
+		font-size: $base-font-size * 2;
+		font-weight: 300;
+	}
+}
